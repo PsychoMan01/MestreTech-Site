@@ -1,0 +1,150 @@
+<!-- pagina de contacto-->
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto – MestreTech</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="contactos.css">
+</head>
+<body>
+
+<header>
+  <div class="cabecalho-interior">
+    <a href="index.html" class="logo">Mestre<span>Tech</span></a>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="servicos.html">Serviços</a>
+      <a href="galery.html">Galeria</a>
+      <a href="contacto.html" class="activo">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<section class="cabecalho-pagina video-header">
+  <video autoplay muted loop playsinline class="video-fundo">
+    <source src="videos/contacto-bg.mp4" type="video/mp4">
+    <source src="https://assets.mixkit.co/videos/preview/mixkit-typing-on-a-laptop-keyboard-2258-large.mp4" type="video/mp4">
+  </video>
+  <div class="cabecalho-pagina-interior">
+    <span class="etiqueta-secao" style="color: #00aaee;">Fala connosco</span>
+    <h1 class="aparecer">Contacto</h1>
+    <p class="aparecer atraso-1">Se precisares de ajuda ou quiseres saber o preço de algum serviço, entra em contacto.</p>
+  </div>
+</section>
+
+<section class="secao">
+<div class="secao-interior">
+  <span class="etiqueta-secao">Contacto</span>
+  <h2 class="titulo-secao">Como nos encontrar</h2>
+  <p class="subtitulo-secao">
+    Podes falar connosco pelo formulário em baixo ou usar um dos contactos diretos.
+  </p>
+
+  <div class="grelha-contacto">
+
+    <!-- informacoes de contacto direto -->
+    <div class="info-contacto">
+      <div class="item-contacto aparecer">
+        <div><h4>Onde estamos</h4><p>Mindelo, Cabo Verde</p></div>
+      </div>
+      <div class="item-contacto aparecer atraso-1">
+        <div><h4>Email</h4><p>mestretechcvoficial00@gmail.com</p></div>
+      </div>
+      <div class="item-contacto aparecer atraso-2">
+        <div><h4>Telefone</h4><p>+238 9884938 / +238 9506585 / +238 5898449</p></div>
+      </div>
+      <div class="item-contacto aparecer atraso-3">
+        <div><h4>Horário</h4><p>Segunda a Sexta, das 8h às 18h</p></div>
+      </div>
+    </div>
+
+    <!-- formulario de contacto -->
+    <div class="formulario-contacto aparecer atraso-1">
+      <h3>Manda-nos uma mensagem</h3>
+
+      <div class="grupo-campo">
+        <label for="nome">O teu nome</label>
+        <input type="text" id="nome" placeholder="Escreve o teu nome" required>
+      </div>
+
+      <div class="grupo-campo">
+        <label for="email">O teu email</label>
+        <input type="email" id="email" placeholder="o.teu@email.com" required>
+      </div>
+
+      <div class="grupo-campo">
+        <label for="assunto">Assunto</label>
+        <input type="text" id="assunto" placeholder="Ex: Quero reparar o meu computador">
+      </div>
+
+      <div class="grupo-campo">
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" placeholder="Explica o teu problema ou o que precisas..." required></textarea>
+      </div>
+
+      <button type="button" class="botao-enviar" onclick="enviarMensagem()">Enviar</button>
+
+      <div id="mensagemSucesso" class="mensagem-sucesso">
+        Mensagem enviada! Vamos responder assim que possível.
+      </div>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<footer>
+  <div class="rodape-interior">
+    <div class="rodape-logo">Mestre<span>Tech</span></div>
+    <div class="rodape-links">
+      <a href="index.html">Início</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="servicos.html">Serviços</a>
+      <a href="galery.html">Galeria</a>
+      <a href="contacto.html">Contacto</a>
+    </div>
+    <div class="rodape-direitos">© 2026 MestreTech. Todos os direitos reservados sobre Massimiliano Monteiro, Arténio Luz e Daniel Cardoso (RUCA).</div>
+  </div>
+</footer>
+
+<script>
+  // funcao pra validar e enviar o formulario
+  function enviarMensagem() {
+    var nome = document.getElementById('nome').value;
+    var email = document.getElementById('email').value;
+    var mensagem = document.getElementById('mensagem').value;
+
+    // verificar se os campos obrigatorios estao preenchidos
+    if (nome == "" || email == "" || mensagem == "") {
+      alert("Por favor preenche todos os campos obrigatórios.");
+      return;
+    }
+
+    // verificacao basica de email
+    if (email.indexOf('@') == -1) {
+      alert("Por favor insere um email válido com @");
+      return;
+    }
+
+    // mostrar mensagem de sucesso
+    var msgDiv = document.getElementById('mensagemSucesso');
+    msgDiv.style.display = 'block';
+
+    // limpar os campos depois de enviar
+    document.getElementById('nome').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('assunto').value = '';
+    document.getElementById('mensagem').value = '';
+
+    // esconder a mensagem de sucesso depois de 5 segundos
+    setTimeout(function() {
+      msgDiv.style.display = 'none';
+    }, 5000);
+  }
+</script>
+
+</body>
+</html>
