@@ -110,8 +110,7 @@
   </div>
 </footer>
 
-
-  <script>
+<script>
   // funcao pra validar e enviar o formulario
   function enviarMensagem() {
     var nome = document.getElementById('nome').value;
@@ -131,45 +130,22 @@
       return;
     }
 
-    // Criar os dados para enviar ao PHP
-    var formData = new FormData();
-    formData.append('nome', nome);
-    formData.append('email', email);
-    formData.append('assunto', assunto);
-    formData.append('mensagem', mensagem);
+    // mostrar mensagem de sucesso
+    var msgDiv = document.getElementById('mensagemSucesso');
+    msgDiv.style.display = 'block';
 
-    // Enviar para o arquivo PHP
-    fetch('enviar_mensagem.php', {
-      method: 'POST',
-      body: formData
-    })
-    .then(response => response.text())
-    .then(data => {
-      if (data === 'success') {
-        // mostrar mensagem de sucesso
-        var msgDiv = document.getElementById('mensagemSucesso');
-        msgDiv.style.display = 'block';
+    // limpar os campos depois de enviar
+    document.getElementById('nome').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('assunto').value = '';
+    document.getElementById('mensagem').value = '';
 
-        // limpar os campos depois de enviar
-        document.getElementById('nome').value = '';
-        document.getElementById('email').value = '';
-        document.getElementById('assunto').value = '';
-        document.getElementById('mensagem').value = '';
-
-        // esconder a mensagem de sucesso depois de 5 segundos
-        setTimeout(function() {
-          msgDiv.style.display = 'none';
-        }, 5000);
-      } else {
-        alert('Erro ao enviar mensagem. Tente novamente.');
-      }
-    })
-    .catch(error => {
-      alert('Erro de conexão. Verifique se o servidor está rodando.');
-    });
+    // esconder a mensagem de sucesso depois de 5 segundos
+    setTimeout(function() {
+      msgDiv.style.display = 'none';
+    }, 5000);
   }
 </script>
-
 
 </body>
 </html>
