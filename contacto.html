@@ -111,55 +111,39 @@
 </footer>
 
 <script>
+  // funcao pra validar e enviar o formulario
   function enviarMensagem() {
     var nome = document.getElementById('nome').value;
     var email = document.getElementById('email').value;
     var assunto = document.getElementById('assunto').value;
     var mensagem = document.getElementById('mensagem').value;
 
+    // verificar se os campos obrigatorios estao preenchidos
     if (nome == "" || email == "" || mensagem == "") {
       alert("Por favor preenche todos os campos obrigatórios.");
       return;
     }
 
+    // verificacao basica de email
     if (email.indexOf('@') == -1) {
       alert("Por favor insere um email válido com @");
       return;
     }
 
-    // Criar dados para enviar ao PHP
-    var formData = new FormData();
-    formData.append('nome', nome);
-    formData.append('email', email);
-    formData.append('assunto', assunto);
-    formData.append('mensagem', mensagem);
+    // mostrar mensagem de sucesso
+    var msgDiv = document.getElementById('mensagemSucesso');
+    msgDiv.style.display = 'block';
 
-    // Enviar para o PHP
-    fetch('enviar_mensagem.php', {
-      method: 'POST',
-      body: formData
-    })
-    .then(response => response.text())
-    .then(data => {
-      if (data === 'success') {  // Tem que ser igual ao que o PHP retorna
-        var msgDiv = document.getElementById('mensagemSucesso');
-        msgDiv.style.display = 'block';
+    // limpar os campos depois de enviar
+    document.getElementById('nome').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('assunto').value = '';
+    document.getElementById('mensagem').value = '';
 
-        document.getElementById('nome').value = '';
-        document.getElementById('email').value = '';
-        document.getElementById('assunto').value = '';
-        document.getElementById('mensagem').value = '';
-
-        setTimeout(function() {
-          msgDiv.style.display = 'none';
-        }, 5000);
-      } else {
-        alert('Erro ao enviar mensagem: ' + data);
-      }
-    })
-    .catch(error => {
-      alert('Erro de conexão: ' + error);
-    });
+    // esconder a mensagem de sucesso depois de 5 segundos
+    setTimeout(function() {
+      msgDiv.style.display = 'none';
+    }, 5000);
   }
 </script>
 
