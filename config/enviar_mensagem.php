@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($conn->query($sql) === TRUE){   //li te executa querry e verifica sel funciona com sucesso
         echo "Sucedidd";
     } else {
-        echo "error: " . $conn->error;
+        echo "error: ";
     }
 }
 $conn->close();
