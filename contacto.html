@@ -85,7 +85,7 @@
         <textarea id="mensagem" placeholder="Explica o teu problema ou o que precisas..." required></textarea>
       </div>
 
-      <button type="button" class="botao-enviar" onclick="enviarMensagem()">Enviar</button>
+      <button type="button" id="btnEnviar" class="botao-enviar" onclick="enviarMensagem()">Enviar</button>
 
       <div id="mensagemSucesso" class="mensagem-sucesso">
         Mensagem enviada! Vamos responder assim que possível.
@@ -111,41 +111,53 @@
 </footer>
 
 <script>
-  // funcao pra validar e enviar o formulario
-  function enviarMensagem() {
-    var nome = document.getElementById('nome').value;
-    var email = document.getElementById('email').value;
-    var assunto = document.getElementById('assunto').value;
-    var mensagem = document.getElementById('mensagem').value;
+  async function enviarMensagem() {
+    var nome     = document.getElementById('nome').value.trim();
+    var email    = document.getElementById('email').value.trim();
+    var assunto  = document.getElementById('assunto').value.trim();
+    var mensagem = document.getElementById('mensagem').value.trim();
 
-    // verificar se os campos obrigatorios estao preenchidos
-    if (nome == "" || email == "" || mensagem == "") {
+    var btn = document.getElementById('btnEnviar');
+
+    if (nome === '' || email === '' || mensagem === '') {
       alert("Por favor preenche todos os campos obrigatórios.");
       return;
     }
 
-    // verificacao basica de email
-    if (email.indexOf('@') == -1) {
-      alert("Por favor insere um email válido com @");
-      return;
+    btn.disabled    = true;
+    btn.textContent = 'A enviar...';
+
+    var dados = new FormData();
+    dados.append('nome',     nome);
+    dados.append('email',    email);
+    dados.append('assunto',  assunto);
+    dados.append('mensagem', mensagem);
+
+    try {
+      var resposta  = await fetch('enviar_mensagem.php', { method: 'POST', body: dados });
+      var resultado = await resposta.json();
+
+      if (resultado.sucesso) {
+        document.getElementById('nome').value     = '';
+        document.getElementById('email').value    = '';
+        document.getElementById('assunto').value  = '';
+        document.getElementById('mensagem').value = '';
+        document.getElementById('mensagemSucesso').style.display = 'block';
+        setTimeout(function() {
+          document.getElementById('mensagemSucesso').style.display = 'none';
+        }, 5000);
+      } else {
+        alert('Erro: ' + (resultado.mensagem || 'Tenta novamente.'));
+      }
+    } catch (e) {
+      alert('Erro ao enviar. Verifica a ligação.');
+    } finally {
+      btn.disabled    = false;
+      btn.textContent = 'Enviar';
     }
-
-    // mostrar mensagem de sucesso
-    var msgDiv = document.getElementById('mensagemSucesso');
-    msgDiv.style.display = 'block';
-
-    // limpar os campos depois de enviar
-    document.getElementById('nome').value = '';
-    document.getElementById('email').value = '';
-    document.getElementById('assunto').value = '';
-    document.getElementById('mensagem').value = '';
-
-    // esconder a mensagem de sucesso depois de 5 segundos
-    setTimeout(function() {
-      msgDiv.style.display = 'none';
-    }, 5000);
   }
 </script>
+
 
 </body>
 </html>
