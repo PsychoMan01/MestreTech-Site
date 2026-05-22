@@ -1,0 +1,1 @@
+<?php header("Location: PHP_Pages/index.php"); exit; ?>
