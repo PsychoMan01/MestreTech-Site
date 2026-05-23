@@ -1,4 +1,11 @@
 <?php
+session_start();
+if (!isset($pagina_publica)) {
+    if (!isset($_SESSION['utilizador'])) {
+        header('Location: login.php');
+        exit;
+    }
+}
 /**
  * header.php — Cabeçalho reutilizável do MestreTech
  *
@@ -39,15 +46,17 @@ function nav_activo($pagina, $atual) {
 <body>
 
 <!-- cabecalho com navegacao -->
-<header>
+<header style="<?php echo isset($pagina_publica) ? 'background: #08111f;' : ''; ?>">
   <div class="cabecalho-interior">
-    <a href="index.php" class="logo">Mestre<span>Tech</span></a>
+    <a href="<?php echo isset($pagina_publica) ? '#' : 'index.php'; ?>" class="logo">Mestre<span>Tech</span></a>
+    <?php if (!isset($pagina_publica)): ?>
     <nav>
       <a href="index.php"<?php echo nav_activo('inicio', $pagina_atual); ?>>Início</a>
       <a href="sobre.php"<?php echo nav_activo('sobre', $pagina_atual); ?>>Sobre</a>
       <a href="servicos.php"<?php echo nav_activo('servicos', $pagina_atual); ?>>Serviços</a>
       <a href="galery.php"<?php echo nav_activo('galeria', $pagina_atual); ?>>Galeria</a>
       <a href="contacto.php"<?php echo nav_activo('contacto', $pagina_atual); ?>>Contacto</a>
-    </nav>
+</nav>
+    <?php endif; ?>
   </div>
 </header>
