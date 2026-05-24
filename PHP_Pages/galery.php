@@ -1,7 +1,7 @@
 <?php
 $pagina_atual = 'galery';
 $titulo_pagina = 'MestreTech';
-$css_extra = ['../CSS/index.css'];
+$css_extra = ['../CSS/galery.css'];
 require '../Modules/header.php';
 ?>
 

@@ -1,7 +1,7 @@
 <?php
 $pagina_atual = 'reparos';
 $titulo_pagina = 'MestreTech';
-$css_extra = ['../CSS/index.css'];
+$css_extra = ['../CSS/repairs.css'];
 require '../Modules/header.php';
 ?>
 

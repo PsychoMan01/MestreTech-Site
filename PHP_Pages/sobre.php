@@ -2,7 +2,7 @@
 <?php
 $pagina_atual = 'sobre';
 $titulo_pagina = 'MestreTech';
-$css_extra = ['../CSS/index.css'];
+$css_extra = ['../CSS/about.css', '../CSS/index.css'];
 require '../Modules/header.php';
 ?>
 
@@ -35,19 +35,15 @@ require '../Modules/header.php';
 
         <ul class="lista-caracteristicas" style="margin-top: 28px;">
           <li>
-            <span class="icone-visto">✓</span>
             Experiência prática em ambiente real de trabalho
           </li>
           <li>
-            <span class="icone-visto">✓</span>
             Desenvolvimento contínuo de competências técnicas
           </li>
           <li>
-            <span class="icone-visto">✓</span>
             Trabalho colaborativo e em equipa
           </li>
           <li>
-            <span class="icone-visto">✓</span>
             Foco na satisfação e acessibilidade para os clientes
           </li>
         </ul>

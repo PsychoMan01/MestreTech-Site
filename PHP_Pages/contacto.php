@@ -2,7 +2,7 @@
 <?php
 $pagina_atual = 'contacto';
 $titulo_pagina = 'MestreTech';
-$css_extra = ['../CSS/index.css'];
+$css_extra = ['../CSS/contacts.css'];
 require '../Modules/header.php';
 ?>
 
