@@ -42,21 +42,38 @@ function nav_activo($pagina, $atual) {
   <?php endforeach; ?>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@700&display=swap">
+  <script>
+  // esta funcao abre e fecha o menu quando se clica no botao hamburguer
+  function toggleMenu() {
+    var nav = document.getElementById('menu-nav');
+    nav.classList.toggle('aberto');
+  }
+</script>
 </head>
 <body>
 
 <!-- cabecalho com navegacao -->
 <header style="<?php echo isset($pagina_publica) ? 'background: #08111f;' : ''; ?>">
   <div class="cabecalho-interior">
-    <a href="<?php echo isset($pagina_publica) ? '#' : 'index.php'; ?>" class="logo">Mestre<span>Tech</span></a>
+    <a href="<?php echo isset($pagina_publica) ? '../PHP_Pages/index.php' : 'index.php'; ?>" class="logo">Mestre<span>Tech</span></a>
     <?php if (!isset($pagina_publica)): ?>
-    <nav>
+    <button class="menu-hamburguer" onclick="toggleMenu()" aria-label="Abrir menu">
+      &#9776;
+    </button>
+    <nav id=menu-nav>
       <a href="index.php"<?php echo nav_activo('inicio', $pagina_atual); ?>>Início</a>
       <a href="sobre.php"<?php echo nav_activo('sobre', $pagina_atual); ?>>Sobre</a>
       <a href="servicos.php"<?php echo nav_activo('servicos', $pagina_atual); ?>>Serviços</a>
       <a href="galery.php"<?php echo nav_activo('galeria', $pagina_atual); ?>>Galeria</a>
       <a href="contacto.php"<?php echo nav_activo('contacto', $pagina_atual); ?>>Contacto</a>
-</nav>
+      <a href="pedido_cliente.php"<?php echo nav_activo('pedido', $pagina_atual); ?>>Pedir Reparação</a>
+      <?php if (isset($_SESSION['utilizador'])): ?>
+        <span style="color: rgba(255,255,255,0.7); font-size: 14px; align-self: center;">
+          Olá, <?php echo htmlspecialchars($_SESSION['utilizador']['nome']); ?>
+        </span>
+        <a href="logout.php" style="color: #ff6b6b;">Sair</a>
+      <?php endif; ?>
+    </nav>
     <?php endif; ?>
   </div>
 </header>

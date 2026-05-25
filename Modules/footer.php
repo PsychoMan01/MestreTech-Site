@@ -11,6 +11,8 @@
       <a href="servicos.php">Serviços</a>
       <a href="galery.php">Galeria</a>
       <a href="contacto.php">Contacto</a>
+      <a href="pedido_cliente.php">Pedir Reparação</a>
+      <a href="funcionario.php">Funcionários</a>
     </div>
     <div class="rodape-direitos">© 2026 MestreTech. Todos os direitos reservados sobre Massimiliano Monteiro, Arténio Luz e Daniel Cardoso (RUCA).</div>
   </div>

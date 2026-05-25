@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
  
 $titulo_pagina = 'Login — MestreTech';
-$css_extra     = ['../CSS/login.css'];
+$css_extra     = ['../CSS/login.css', '../CSS/base.css'];
 $pagina_publica = true;
 require '../Modules/header.php';
 ?>
@@ -52,7 +52,7 @@ require '../Modules/header.php';
         <input type="password" name="password" required>
         <button type="submit" class="botao-principal">Entrar</button>
       </form>
-      
+
       <p style="margin-top: 16px; font-size: 14px; text-align: center; color: #555;">
         Não tens conta? <a href="registro.php" style="color: #0044cc; font-weight: 600;">Cria uma aqui</a>
       </p>

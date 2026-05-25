@@ -1,5 +1,5 @@
 <?php
-$pagina_atual = 'galery';
+$pagina_atual = 'galeria';
 $titulo_pagina = 'MestreTech';
 $css_extra = ['../CSS/galery.css'];
 require '../Modules/header.php';
