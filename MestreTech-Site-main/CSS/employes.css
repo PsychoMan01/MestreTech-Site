@@ -1,0 +1,203 @@
+.pagina {
+            min-height: calc(100vh - 80px);
+            background: #f2f5fb;
+            padding: 40px 20px;
+        }
+
+        /* Barra com nome do funcionário */
+        .barra-topo {
+            max-width: 860px;
+            margin: 0 auto 22px auto;
+            background: #0044cc;
+            color: white;
+            padding: 14px 22px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 15px;
+        }
+
+        .barra-topo a {
+            color: white;
+            font-size: 13px;
+            text-decoration: underline;
+        }
+
+        .titulo-pagina {
+            max-width: 860px;
+            margin: 0 auto 24px auto;
+        }
+
+        .titulo-pagina h1 {
+            font-size: 1.8rem;
+            color: #08111f;
+            margin-bottom: 4px;
+        }
+
+        .titulo-pagina p {
+            color: #666;
+            font-size: 15px;
+        }
+
+        /* Lista de pedidos */
+        .lista {
+            max-width: 860px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        /* Cada pedido é um cartão com borda colorida */
+        .cartao {
+            background: white;
+            border-radius: 12px;
+            padding: 22px 24px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            border-left: 6px solid #ccc;
+        }
+
+        .cartao.pendente  { border-left-color: #cc0000; }
+        .cartao.aceite    { border-left-color: #e6a800; }
+        .cartao.concluido { border-left-color: #2e7d32; }
+
+        /* Linha de cima do cartão */
+        .cartao-topo {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+
+        .cartao-topo h3 {
+            font-size: 1rem;
+            color: #08111f;
+            margin-bottom: 3px;
+        }
+
+        .cartao-topo p {
+            font-size: 13px;
+            color: #666;
+        }
+
+        /* Etiqueta de estado */
+        .etiqueta {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .etiqueta.pendente  { background: #ffe5e5; color: #cc0000; }
+        .etiqueta.aceite    { background: #fff8e0; color: #c68000; }
+        .etiqueta.concluido { background: #e8f5e9; color: #2e7d32; }
+
+        /* Caixa com a descrição do problema */
+        .descricao {
+            background: #f6f8fc;
+            border-radius: 8px;
+            padding: 12px 16px;
+            font-size: 14px;
+            color: #444;
+            line-height: 1.6;
+            margin: 10px 0 14px 0;
+            font-style: italic;
+        }
+
+        /* Botões */
+        .botao-aceitar {
+            padding: 9px 20px;
+            background: #0044cc;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .botao-aceitar:hover { background: #002fa0; }
+
+        .botao-concluir {
+            padding: 9px 20px;
+            background: #2e7d32;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .botao-concluir:hover { background: #1b5e20; }
+
+        .texto-outro-func {
+            font-size: 13px;
+            color: #999;
+            font-style: italic;
+        }
+
+        /* Mensagem quando não há pedidos */
+        .sem-pedidos {
+            text-align: center;
+            padding: 60px;
+            color: #aaa;
+        }
+
+        /* Formulário de login */
+        .caixa-login {
+            max-width: 380px;
+            margin: 70px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 14px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .caixa-login h2 { color: #08111f; margin-bottom: 6px; }
+        .caixa-login p  { color: #888; font-size: 14px; margin-bottom: 22px; }
+
+        label {
+            display: block;
+            font-weight: 600;
+            font-size: 14px;
+            color: #444;
+            margin-bottom: 6px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px 14px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            font-size: 15px;
+            box-sizing: border-box;
+        }
+
+        input:focus { outline: none; border-color: #0044cc; }
+
+        .botao-entrar {
+            width: 100%;
+            padding: 12px;
+            background: #0044cc;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .botao-entrar:hover { background: #002fa0; }
+
+        .erro {
+            background: #ffe5e5;
+            color: #cc0000;
+            padding: 10px 14px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            font-size: 14px;
+        }
