@@ -41,10 +41,13 @@ if (isset($_GET['novo'])) {
     exit;
 }
 ?>
-<?php require '../Modules/header.php'; 
-$css_extra = ['../CSS/request_client.css'];
-?>
 
+<?php
+$pagina_atual = 'pedido';
+$titulo_pagina = 'MestreTech — Pedir Reparação';
+$css_extra = ['../CSS/request_client.css'];
+require '../Modules/header.php';
+?>
 
 <div class="pagina">
 

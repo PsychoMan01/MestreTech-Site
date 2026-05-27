@@ -32,7 +32,7 @@ require '../Modules/header.php';
     </p>
 
     <div class="lista-servicos">
-      <div class="linha-servico aparecer">
+      <a href="pedido_cliente.php" class="linha-servico aparecer">
         <div class="conteudo-linha-servico">
           <h3>Reparação de Computadores</h3>
           <p>
@@ -41,9 +41,9 @@ require '../Modules/header.php';
           </p>
         </div>
         <div class="seta-servico">→</div>
-      </div>
+      </a>
 
-      <div class="linha-servico aparecer atraso-1">
+      <a href="pedido_cliente.php" class="linha-servico aparecer atraso-1">
         <div class="conteudo-linha-servico">
           <h3>Reparação de Telemóveis</h3>
           <p>
@@ -52,9 +52,9 @@ require '../Modules/header.php';
           </p>
         </div>
         <div class="seta-servico">→</div>
-      </div>
+      </a>
 
-      <div class="linha-servico aparecer atraso-2">
+      <a href="pedido_cliente.php" class="linha-servico aparecer atraso-2">
         <div class="conteudo-linha-servico">
           <h3>Instalação de Software</h3>
           <p>
@@ -63,9 +63,9 @@ require '../Modules/header.php';
           </p>
         </div>
         <div class="seta-servico">→</div>
-      </div>
+      </a>
 
-      <div class="linha-servico aparecer atraso-3">
+      <a href="pedido_cliente.php" class="linha-servico aparecer atraso-3">
         <div class="conteudo-linha-servico">
           <h3>Limpeza e Manutenção</h3>
           <p>
@@ -74,9 +74,9 @@ require '../Modules/header.php';
           </p>
         </div>
         <div class="seta-servico">→</div>
-      </div>
+      </a>
 
-      <div class="linha-servico aparecer atraso-4">
+      <a href="pedido_cliente.php" class="linha-servico aparecer atraso-4">
         <div class="conteudo-linha-servico">
           <h3>Diagnóstico de Problemas</h3>
           <p>
@@ -85,7 +85,7 @@ require '../Modules/header.php';
           </p>
         </div>
         <div class="seta-servico">→</div>
-      </div>
+      </a>
     </div>
   </div>
 </section>

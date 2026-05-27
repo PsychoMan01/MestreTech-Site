@@ -1,6 +1,13 @@
 /* estilos da pagina de servicos */
 
 /* lista de servicos com linha separadora */
+
+a.linha-servico {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+}
+
 .lista-servicos {
   margin-top: 50px;
   display: flex;
