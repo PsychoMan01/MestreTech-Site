@@ -64,7 +64,7 @@ require '../Modules/header.php';
   
     <div class="evento-card aparecer" data-categoria="concerto">
       <div class="evento-card-img">
-        <img src="images/montagem.png" alt="Montagem">
+        <img src="../images/montagem.png" alt="Montagem">
         <span class="evento-card-tag">Montagem Desktop</span>
       </div>
       <div class="evento-card-corpo">
@@ -80,7 +80,7 @@ require '../Modules/header.php';
 
     <div class="evento-card aparecer" data-categoria="concerto">
       <div class="evento-card-img">
-        <img src="images/concertopc.png" alt="Reparação de Notebooks">
+        <img src="../images/concertopc.png" alt="Reparação de Notebooks">
         <span class="evento-card-tag">Reparação</span>
       </div>
       <div class="evento-card-corpo">
@@ -96,7 +96,7 @@ require '../Modules/header.php';
 
     <div class="evento-card aparecer atraso-1" data-categoria="workshop">
       <div class="evento-card-img">
-        <img src="images/xbox.png" alt="Personalização XBOX">
+        <img src="../images/xbox.png" alt="Personalização XBOX">
         <span class="evento-card-tag">Personalização</span>
       </div>
       <div class="evento-card-corpo">
@@ -112,7 +112,7 @@ require '../Modules/header.php';
 
     <div class="evento-card aparecer atraso-1" data-categoria="workshop">
       <div class="evento-card-img">
-        <img src="images/Ps4_rony.jpg" alt="Personalização Play Station">
+        <img src="../images/Ps4_rony.jpg" alt="Personalização Play Station">
         <span class="evento-card-tag">Personalização</span>
       </div>
       <div class="evento-card-corpo">
@@ -129,7 +129,7 @@ require '../Modules/header.php';
 
     <div class="evento-card aparecer atraso-2" data-categoria="evento">
       <div class="evento-card-img">
-        <img src="images/portatil.png"Limpeza de notebook">
+        <img src="../images/portatil.png" alt="Limpeza de notebook">
         <span class="evento-card-tag">Limpeza</span>
       </div>
       <div class="evento-card-corpo">
