@@ -77,8 +77,11 @@ if (isset($_SESSION['admin'])) {
     }
 }
 ?>
-<?php require '../Modules/header.php'; 
+<?php
+$pagina_atual = 'admin';
+$titulo_pagina = 'MestreTech — Admin';
 $css_extra = ['../CSS/admin.css'];
+require '../Modules/header.php';
 ?>
 
 <div class="pagina">
