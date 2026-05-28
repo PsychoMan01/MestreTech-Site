@@ -24,7 +24,7 @@ a.linha-servico {
   cursor: pointer;
 }
 .linha-servico:hover .seta-servico {
-  color: #0044cc;
+  color: #ff6b00;
   transform: translateX(4px);
 }
 
@@ -49,7 +49,7 @@ a.linha-servico {
 
 /* caixa azul la em baixo com chamada pra contacto */
 .caixa-cta {
-  background: #0044cc;
+  background: #ff6b00;
   border-radius: 16px;
   padding: 60px;
   text-align: center;
@@ -72,7 +72,7 @@ a.linha-servico {
 
 .caixa-cta .botao-principal {
   background: white;
-  color: #0044cc;
+  color: #ff6b00;
 }
 
 .caixa-cta .botao-principal:hover {

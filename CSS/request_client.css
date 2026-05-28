@@ -46,7 +46,7 @@
 
         input:focus, select:focus, textarea:focus {
             outline: none;
-            border-color: #0044cc;
+            border-color: #ff6b00;
         }
 
         textarea {
@@ -64,7 +64,7 @@
         .botao-enviar {
             width: 100%;
             padding: 13px;
-            background: #0044cc;
+            background: #ff6b00;
             color: white;
             border: none;
             border-radius: 10px;
@@ -74,7 +74,7 @@
         }
 
         .botao-enviar:hover {
-            background: #002fa0;
+            background: #e05c00;
         }
 
         .erro {
@@ -142,7 +142,7 @@
             display: inline-block;
             margin-top: 18px;
             padding: 10px 22px;
-            background: #0044cc;
+            background: #ff6b00;
             color: white;
             border-radius: 8px;
             text-decoration: none;

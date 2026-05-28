@@ -8,7 +8,7 @@
         .barra-topo {
             max-width: 800px;
             margin: 0 auto 22px auto;
-            background: #08111f;
+            background: #0d1f3c;
             color: white;
             padding: 14px 22px;
             border-radius: 10px;
@@ -18,7 +18,7 @@
             font-size: 15px;
         }
 
-        .barra-topo a { color: #00aaee; font-size: 13px; }
+        .barra-topo a { color: #ff6b00; font-size: 13px; }
 
         .titulo-pagina {
             max-width: 800px;
@@ -65,11 +65,11 @@
             box-sizing: border-box;
         }
 
-        input:focus { outline: none; border-color: #0044cc; }
+        input:focus { outline: none; border-color: #ff6b00; }
 
         .botao-adicionar {
             padding: 10px 18px;
-            background: #0044cc;
+            background: #ff6b00;
             color: white;
             border: none;
             border-radius: 8px;
@@ -79,7 +79,7 @@
             white-space: nowrap;
         }
 
-        .botao-adicionar:hover { background: #002fa0; }
+        .botao-adicionar:hover { background: #e05c00; }
 
         /* Caixa com a lista de funcionários */
         .caixa-lista {

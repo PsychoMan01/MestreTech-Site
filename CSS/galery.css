@@ -2,7 +2,7 @@
 
 /* banner la em cima com fundo escuro */
 .galeria-banner {
-  background: #08111f;
+  background: #0d1f3c;
   padding: 80px 20px;
   position: relative;
 }
@@ -26,7 +26,7 @@
 }
 
 .galeria-banner .etiqueta-secao {
-  color: #00aaee;
+  color: #ff6b00;
 }
 
 /* barra de filtros e pesquisa */
@@ -67,14 +67,14 @@
 
 .filtro-btn:hover {
   background: #f0f4ff;
-  border-color: #0044cc;
-  color: #0044cc;
+  border-color: #ff6b00;
+  color: #ff6b00;
 }
 
 .filtro-btn.activo {
-  background: #0044cc;
+  background: #ff6b00;
   color: white;
-  border-color: #0044cc;
+  border-color: #ff6b00;
 }
 
 /* campo de pesquisa */
@@ -145,7 +145,7 @@
   position: absolute;
   top: 12px;
   left: 12px;
-  background: #0044cc;
+  background: #ff6b00;
   color: white;
   font-size: 12px;
   padding: 4px 10px;

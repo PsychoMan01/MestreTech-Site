@@ -48,6 +48,17 @@ function nav_activo($pagina, $atual) {
     var nav = document.getElementById('menu-nav');
     nav.classList.toggle('aberto');
   }
+  function toggleDropdown() {
+    var menu = document.getElementById('dropdown-menu');
+    menu.classList.toggle('aberto');
+}
+// fecha o dropdown ao clicar fora
+  document.addEventListener('click', function(e) {
+    var dropdown = document.querySelector('.dropdown');
+    if (dropdown && !dropdown.contains(e.target)) {
+      document.getElementById('dropdown-menu').classList.remove('aberto');
+  }
+});
 </script>
 </head>
 <body>
@@ -60,23 +71,23 @@ function nav_activo($pagina, $atual) {
     <button class="menu-hamburguer" onclick="toggleMenu()" aria-label="Abrir menu">
       &#9776;
     </button>
-    <nav id=menu-nav>
-      <a href="index.php"<?php echo nav_activo('inicio', $pagina_atual); ?>>Início</a>
-      <a href="sobre.php"<?php echo nav_activo('sobre', $pagina_atual); ?>>Sobre</a>
-      <a href="servicos.php"<?php echo nav_activo('servicos', $pagina_atual); ?>>Serviços</a>
-      <a href="galery.php"<?php echo nav_activo('galeria', $pagina_atual); ?>>Galeria</a>
-      <a href="contacto.php"<?php echo nav_activo('contacto', $pagina_atual); ?>>Contacto</a>
-      <a href="pedido_cliente.php"<?php echo nav_activo('pedido', $pagina_atual); ?>>Pedir Reparação</a>
-      <?php if (isset($_SESSION['utilizador']) && $_SESSION['utilizador']['cargo'] === 'admin'): ?>
-        <a href="admin.php"<?php echo nav_activo('admin', $pagina_atual); ?>>Gerir Funcionários</a>
-      <?php endif; ?>
-      <?php if (isset($_SESSION['utilizador'])): ?>
-        <span style="color: rgba(255,255,255,0.7); font-size: 14px; align-self: center;">
-          Olá, <?php echo htmlspecialchars($_SESSION['utilizador']['nome']); ?>
-        </span>
-        <a href="logout.php" style="color: #ff6b6b;">Sair</a>
-      <?php endif; ?>
-    </nav>
+    <nav id="menu-nav">
+      <div class="dropdown">
+        <button class="dropdown-toggle" onclick="toggleDropdown()">Menu ▾</button>
+        <div class="dropdown-menu" id="dropdown-menu">
+        <a href="index.php"<?php echo nav_activo('inicio', $pagina_atual); ?>>Início</a>
+        <a href="sobre.php"<?php echo nav_activo('sobre', $pagina_atual); ?>>Sobre</a>
+        <a href="servicos.php"<?php echo nav_activo('servicos', $pagina_atual); ?>>Serviços</a>
+        <a href="galery.php"<?php echo nav_activo('galeria', $pagina_atual); ?>>Galeria</a>
+        <a href="contacto.php"<?php echo nav_activo('contacto', $pagina_atual); ?>>Contacto</a>
+      </div>
+  </div>
+  <a href="pedido_cliente.php"<?php echo nav_activo('pedido', $pagina_atual); ?>>Pedir Reparação</a>
+  <?php if (isset($_SESSION['utilizador']) && $_SESSION['utilizador']['cargo'] === 'admin'): ?>
+    <a href="admin.php"<?php echo nav_activo('admin', $pagina_atual); ?>>Gerir Funcionários</a>
+  <?php endif; ?>
+  ...
+</nav>
     <?php endif; ?>
   </div>
 </header>

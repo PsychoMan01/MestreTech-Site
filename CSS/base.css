@@ -19,7 +19,7 @@ h1, h2, h3, h4 {
 
 /* header fica no topo sempre */
 header {
-  background: #0044cc;
+  background: #0a1628;
   padding: 10px 20px;
   position: sticky;
   top: 0;
@@ -45,7 +45,7 @@ header {
 
 /* a parte Tech fica azul claro */
 .logo span {
-  color: #00aaee;
+  color: #3a7bd5
 }
 
 nav {
@@ -77,7 +77,7 @@ nav a.activo {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: #0044cc;
+  background: #ff6b00;
   color: white;
   border: none;
   cursor: pointer;
@@ -96,7 +96,7 @@ nav a.activo {
 }
 
 .botao-principal:hover {
-  background: #002fa0;
+  background: #e05c00;
 }
 
 .botao-secundario:hover {
@@ -115,7 +115,7 @@ nav a.activo {
 
 /* etiqueta azul pequena que aparece antes dos titulos */
 .etiqueta-secao {
-  color: #0044cc;
+  color: #ff6b00;
   font-size: 13px;
   font-weight: bold;
   text-transform: uppercase;
@@ -126,7 +126,7 @@ nav a.activo {
 
 .titulo-secao {
   font-size: 2.2rem;
-  color: #08111f;
+  color: #0d1f3c;
   margin-bottom: 12px;
 }
 
@@ -137,7 +137,7 @@ nav a.activo {
 
 /* cabecalho das paginas que nao sao a pagina inicial */
 .cabecalho-pagina {
-  background: #08111f;
+  background: #0d1f3c;
   padding: 70px 20px;
   position: relative;
 }
@@ -162,47 +162,101 @@ nav a.activo {
 
 /* rodape la em baixo */
 footer {
-  background: #08111f;
-  padding: 36px 20px;
+  background: #0d1f3c;
+  padding: 60px 20px 0;
 }
 
 .rodape-interior {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 48px;
+  padding-bottom: 48px;
+}
+
+.rodape-logo {
+  font-family: 'Times New Roman', serif;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 12px;
+}
+
+.rodape-logo span { color: #3a7bd5; }
+
+.rodape-tagline {
+  color: rgba(255,255,255,0.45);
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 240px;
+}
+
+.rodape-titulo-coluna {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgba(255,255,255,0.3);
+  margin-bottom: 18px;
+}
+
+.rodape-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.rodape-links a {
+  color: rgba(255,255,255,0.5);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.rodape-links a:hover {
+  color: white;
+}
+
+.rodape-contacto p {
+  color: rgba(255,255,255,0.5);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.rodape-fundo {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 20px 0;
+}
+
+.rodape-fundo-interior {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 14px;
+  gap: 8px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.25);
 }
 
-.rodape-logo {
-  font-family: 'Times New Roman', serif;
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: white;
+.rodape-autores {
+  font-size: 12px;
 }
 
-.rodape-logo span { color: #00aaee; }
+@media (max-width: 768px) {
+  .rodape-interior {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
 
-.rodape-links {
-  display: flex;
-  gap: 20px;
-}
-
-.rodape-links a {
-  color: rgba(255,255,255,0.4);
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.rodape-links a:hover {
-  color: rgba(255,255,255,0.8);
-}
-
-.rodape-direitos {
-  font-size: 14px;
-  color: rgba(255,255,255,0.4);
+  .rodape-fundo-interior {
+    flex-direction: column;
+    text-align: center;
+    gap: 4px;
+  }
 }
 
 /* animacoes quando os elementos aparecem na pagina - um gostamut dess part, el foi facil na faze untom um t otxa q el é facil na bsot entendel tambem*/
@@ -295,7 +349,7 @@ footer {
     top: 80px;
     left: 0;
     width: 100%;
-    background: #0044cc;
+    background: #0a1628;
     padding: 20px;
     gap: 16px;
     z-index: 200;
@@ -305,4 +359,56 @@ footer {
   nav.aberto {
     display: flex;
   }
+}
+
+/* Dropdown do menu */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+}
+
+.dropdown-toggle:hover {
+  color: #00aaee;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 0;
+  background: #0a1628;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  padding: 8px 0;
+  min-width: 180px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+
+.dropdown-menu.aberto {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-menu a {
+  padding: 10px 20px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu a.activo {
+  color: white;
+  background: rgba(255,255,255,0.07);
 }

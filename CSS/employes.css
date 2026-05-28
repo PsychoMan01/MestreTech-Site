@@ -8,7 +8,7 @@
         .barra-topo {
             max-width: 860px;
             margin: 0 auto 22px auto;
-            background: #0044cc;
+            background: #0d1f3c;
             color: white;
             padding: 14px 22px;
             border-radius: 10px;
@@ -19,7 +19,7 @@
         }
 
         .barra-topo a {
-            color: white;
+            color: #ff6b00;
             font-size: 13px;
             text-decoration: underline;
         }
@@ -109,7 +109,7 @@
         /* Botões */
         .botao-aceitar {
             padding: 9px 20px;
-            background: #0044cc;
+            background: #ff6b00;
             color: white;
             border: none;
             border-radius: 8px;
@@ -118,7 +118,7 @@
             font-weight: bold;
         }
 
-        .botao-aceitar:hover { background: #002fa0; }
+        .botao-aceitar:hover { background: #e05c00; }
 
         .botao-concluir {
             padding: 9px 20px;
@@ -177,12 +177,12 @@
             box-sizing: border-box;
         }
 
-        input:focus { outline: none; border-color: #0044cc; }
+        input:focus { outline: none; border-color: #ff6b00; }
 
         .botao-entrar {
             width: 100%;
             padding: 12px;
-            background: #0044cc;
+            background: #ff6b00;
             color: white;
             border: none;
             border-radius: 10px;
@@ -191,7 +191,7 @@
             cursor: pointer;
         }
 
-        .botao-entrar:hover { background: #002fa0; }
+        .botao-entrar:hover { background: #e05c00; }
 
         .erro {
             background: #ffe5e5;
