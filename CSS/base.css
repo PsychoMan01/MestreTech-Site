@@ -45,7 +45,7 @@ header {
 
 /* a parte Tech fica azul claro */
 .logo span {
-  color: #3a7bd5
+  color: #ff6b00;
 }
 
 nav {
@@ -183,7 +183,7 @@ footer {
   margin-bottom: 12px;
 }
 
-.rodape-logo span { color: #3a7bd5; }
+.rodape-logo span { color: #ff6b00; }
 
 .rodape-tagline {
   color: rgba(255,255,255,0.45);

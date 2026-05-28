@@ -64,7 +64,7 @@ function nav_activo($pagina, $atual) {
 <body>
 
 <!-- cabecalho com navegacao -->
-<header style="<?php echo isset($pagina_publica) ? 'background: #08111f;' : ''; ?>">
+<header style="<?php echo isset($pagina_publica) ? 'background: #0d1f3c;' : ''; ?>">
   <div class="cabecalho-interior">
     <a href="<?php echo isset($pagina_publica) ? '../PHP_Pages/index.php' : 'index.php'; ?>" class="logo">Mestre<span>Tech</span></a>
     <?php if (!isset($pagina_publica)): ?>
