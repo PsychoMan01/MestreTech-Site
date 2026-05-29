@@ -6,6 +6,13 @@ if (!isset($pagina_publica)) {
         exit;
     }
 }
+
+if (isset($_GET['sair'])) {
+    session_destroy();
+    header('Location: admin.php');
+    exit;
+}
+
 /**
  * header.php — Cabeçalho reutilizável do MestreTech
  *
@@ -75,19 +82,22 @@ function nav_activo($pagina, $atual) {
       <div class="dropdown">
         <button class="dropdown-toggle" onclick="toggleDropdown()">Menu ▾</button>
         <div class="dropdown-menu" id="dropdown-menu">
-        <a href="index.php"<?php echo nav_activo('inicio', $pagina_atual); ?>>Início</a>
-        <a href="sobre.php"<?php echo nav_activo('sobre', $pagina_atual); ?>>Sobre</a>
-        <a href="servicos.php"<?php echo nav_activo('servicos', $pagina_atual); ?>>Serviços</a>
-        <a href="galery.php"<?php echo nav_activo('galeria', $pagina_atual); ?>>Galeria</a>
-        <a href="contacto.php"<?php echo nav_activo('contacto', $pagina_atual); ?>>Contacto</a>
+          <a href="index.php"<?php echo nav_activo('inicio', $pagina_atual); ?>>Início</a>
+          <a href="sobre.php"<?php echo nav_activo('sobre', $pagina_atual); ?>>Sobre</a>
+          <a href="servicos.php"<?php echo nav_activo('servicos', $pagina_atual); ?>>Serviços</a>
+          <a href="galery.php"<?php echo nav_activo('galeria', $pagina_atual); ?>>Galeria</a>
+          <a href="contacto.php"<?php echo nav_activo('contacto', $pagina_atual); ?>>Contacto</a>
+        </div>
       </div>
-  </div>
-  <a href="pedido_cliente.php"<?php echo nav_activo('pedido', $pagina_atual); ?>>Pedir Reparação</a>
-  <?php if (isset($_SESSION['utilizador']) && $_SESSION['utilizador']['cargo'] === 'admin'): ?>
-    <a href="admin.php"<?php echo nav_activo('admin', $pagina_atual); ?>>Gerir Funcionários</a>
-  <?php endif; ?>
-  ...
-</nav>
+      <a href="pedido_cliente.php"<?php echo nav_activo('pedido', $pagina_atual); ?>>Pedir Reparação</a>
+      <?php if (isset($_SESSION['utilizador']) && $_SESSION['utilizador']['cargo'] === 'admin'): ?>
+        <a href="admin.php"<?php echo nav_activo('admin', $pagina_atual); ?>>Gerir Funcionários</a>
+      <?php endif; ?>
+      <?php if (isset($_SESSION['utilizador']) && $_SESSION['utilizador']['cargo'] === 'funcionario'): ?>
+        <a href="funcionario.php"<?php echo nav_activo('funcionario', $pagina_atual);?>>Ver Pedidos</a>
+      <?php endif;?>
+      <a href="?sair=1" class = "btn-logout">Sair</a>
+    </nav>
     <?php endif; ?>
   </div>
 </header>

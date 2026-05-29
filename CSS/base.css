@@ -12,13 +12,14 @@ body {
   color: #222;
 }
 
-/* titulos ficam com times new roman */
+/* titulos ficam com Orbitron */
 h1, h2, h3, h4 {
   font-family: 'Orbitron', sans-serif;
 }
 
 /* header fica no topo sempre */
 header {
+  font-family: 'Inter', sans-serif;
   background: #0a1628;
   padding: 10px 20px;
   position: sticky;
@@ -43,7 +44,7 @@ header {
   text-decoration: none;
 }
 
-/* a parte Tech fica azul claro */
+/* a parte Tech fica laranja */
 .logo span {
   color: #ff6b00;
 }
@@ -66,6 +67,15 @@ nav a:hover {
 
 nav a.activo {
   font-weight: bold;
+}
+
+nav .btn-logout{
+  background: #ff6b00;
+  border: 1px solid rgba(255,255,255,0.3);
+  color: white;
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
 /* botoes */

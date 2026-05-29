@@ -20,12 +20,6 @@ if (isset($_POST['acao']) && $_POST['acao'] === 'login') {
     }
 }
 
-if (isset($_GET['sair'])) {
-    session_destroy();
-    header('Location: admin.php');
-    exit;
-}
-
 if (isset($_POST['acao']) && $_POST['acao'] === 'adicionar' && isset($_SESSION['admin'])) {
     $nome     = trim($_POST['nome']);
     $email    = trim($_POST['email']);
@@ -112,7 +106,6 @@ require '../Modules/header.php';
         <!-- Admin está logado -->
         <div class="barra-topo">
             <span>Admin: <strong><?php echo htmlspecialchars($_SESSION['admin']['nome']); ?></strong></span>
-            <a href="?sair=1">Sair</a>
         </div>
 
         <div class="titulo-pagina">

@@ -20,12 +20,6 @@ if (isset($_POST['acao']) && $_POST['acao'] === 'login') {
     }
 }
 
-if (isset($_GET['sair'])) {
-    session_destroy();
-    header('Location: funcionario.php');
-    exit;
-}
-
 if (isset($_POST['acao']) && $_POST['acao'] === 'aceitar' && isset($_SESSION['funcionario'])) {
     $pedido_id = (int)$_POST['pedido_id'];
     $func_id   = (int)$_SESSION['funcionario']['id'];
@@ -63,10 +57,12 @@ if (isset($_SESSION['funcionario'])) {
     }
 }
 ?>
-<?php require '../Modules/header.php'; 
+<?php
+$pagina_atual = 'funcionario';
+$titulo_pagina = 'MestreTech — Funcionários';
 $css_extra = ['../CSS/employes.css'];
+require '../Modules/header.php';
 ?>
-
 <div class="pagina">
 
     <?php if (!isset($_SESSION['funcionario'])): ?>
@@ -94,7 +90,6 @@ $css_extra = ['../CSS/employes.css'];
 
         <div class="barra-topo">
             <span>Olá, <strong><?php echo htmlspecialchars($_SESSION['funcionario']['nome']); ?></strong></span>
-            <a href="?sair=1">Sair</a>
         </div>
 
         <div class="titulo-pagina">
@@ -105,7 +100,6 @@ $css_extra = ['../CSS/employes.css'];
         <div class="lista">
             <?php if (empty($pedidos)): ?>
                 <div class="sem-pedidos">
-                    <p style="font-size: 2rem;">📭</p>
                     <p>Ainda não há pedidos de reparação.</p>
                 </div>
 
