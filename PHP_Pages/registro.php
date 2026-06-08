@@ -20,7 +20,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $erro = 'As passwords não coincidem.';
  
     } else {
-        $verificar = $conn->query("SELECT id FROM utilizadores WHERE email = '$email'");
+        $stmt_ver = $conn->prepare("SELECT id FROM utilizadores WHERE email = ?");
+        $stmt_ver->bind_param("s", $email);
+        $stmt_ver->execute();
+        $verificar = $stmt_ver->get_result();
  
         if ($verificar->num_rows > 0) {
             $erro = 'Este email já está registado.';
@@ -28,10 +31,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } else {
             $password_hash = password_hash($password, PASSWORD_BCRYPT);
  
-            $sql = "INSERT INTO utilizadores (nome, email, telefone, morada, password)
-                    VALUES ('$nome', '$email', '$telefone', '$morada', '$password_hash')";
- 
-            if ($conn->query($sql)) {
+            $stmt_ins = $conn->prepare("INSERT INTO utilizadores (nome, email, telefone, morada, password) VALUES (?, ?, ?, ?, ?)");
+            $stmt_ins->bind_param("sssss", $nome, $email, $telefone, $morada, $password_hash);
+            
+            if ($stmt_ins->execute()) {
                 header('Location: login.php?registado=1');
                 exit;
             } else {

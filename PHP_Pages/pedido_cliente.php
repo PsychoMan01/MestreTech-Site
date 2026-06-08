@@ -17,9 +17,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!$nome || !$telefone || !$servico || !$dispositivo || !$descricao) {
         $erro = 'Por favor, preenche todos os campos.';
     } else {
-        $sql = "INSERT INTO pedidos (nome_cliente, telefone_cliente, tipo_servico, dispositivo, descricao)
-                VALUES ('$nome', '$telefone', '$servico', '$dispositivo', '$descricao')";
-        if ($conn->query($sql)) {
+        $stmt = $conn->prepare("INSERT INTO pedidos (nome_cliente, telefone_cliente, tipo_servico, dispositivo, descricao) VALUES (?, ?, ?, ?, ?)");
+        $stmt->bind_param("sssss", $nome, $telefone, $servico, $dispositivo, $descricao);
+        if ($stmt->execute()) {
             $_SESSION['pedido_id'] = $conn->insert_id;
             $sucesso = true;
         } else {
@@ -31,8 +31,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 $meu_pedido = null;
 if (isset($_SESSION['pedido_id'])) {
     $id = (int)$_SESSION['pedido_id'];
-    $resultado = $conn->query("SELECT * FROM pedidos WHERE id = $id");
-    $meu_pedido = $resultado->fetch_assoc();
+    $stmt = $conn->prepare("SELECT * FROM pedidos WHERE id = ?");
+    $stmt->bind_param("i", $id);
+    $stmt->execute();
+    $meu_pedido = $stmt->get_result()->fetch_assoc();
 }
 
 if (isset($_GET['novo'])) {
@@ -67,7 +69,7 @@ require '../Modules/header.php';
         ?>
 
         <div class="estado-pedido <?php echo $classe; ?> aparecer">
-            <h2><?php echo $icone; ?> Estado do teu pedido</h2>
+            <h2>Estado do teu pedido</h2>
             <p><?php echo $texto; ?></p>
             <p class="info-pedido">
                 Pedido nº <?php echo $meu_pedido['id']; ?> —

@@ -1,1 +1,0 @@
-<?php header("Location: PHP_Pages/login.php"); exit; ?>

@@ -2,6 +2,7 @@
 <!-- emoss um esforça ne faze ess muv pereit pa bsot podia intendel, até cal identação um esforça, ta tud comentod -->
 
 <?php
+error_reporting(0);
 // Define a página ativa (aparece em negrito/sublinhado no menu)
 $pagina_atual = 'inicio';
 
@@ -161,6 +162,5 @@ require '../Modules/header.php';
     </div>
   </div>
 </section>
-</body>
 
 <?php require '../Modules/footer.php'; ?>

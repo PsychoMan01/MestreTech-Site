@@ -8,8 +8,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email    = trim($_POST['email']);
     $password = $_POST['password'];
  
-    $resultado = mysqli_query($conn, "SELECT * FROM utilizadores WHERE email = '$email'");
-    $user      = mysqli_fetch_assoc($resultado);
+    $stmt = $conn->prepare("SELECT * FROM utilizadores WHERE email = ?");
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $user = $stmt->get_result()->fetch_assoc();
  
     if ($user && password_verify($password, $user['password'])) {
         $_SESSION['utilizador'] = $user;
