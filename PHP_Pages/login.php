@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $erro = 'Email ou password incorretos.';
 }
  
-$titulo_pagina = 'Login — MestreTech';
+$titulo_pagina = 'Login - MestreTech';
 $css_extra     = ['../CSS/login.css', '../CSS/base.css'];
 $pagina_publica = true;
 require '../Modules/header.php';

@@ -16,16 +16,16 @@ if (isset($_POST['acao']) && $_POST['acao'] === 'login') {
     $user = $stmt->get_result()->fetch_assoc();
  
     if ($user && password_verify($password, $user['password'])) {
-        // Guarda na sessão
-        $_SESSION['funcionario'] = $user;
+        // Usa a mesma sessão do login normal para não haver confusão
+        $_SESSION['utilizador'] = $user;
     } else {
         $erro = 'Email ou password incorretos. Ou não tens acesso de funcionário.';
     }
 }
  
-if (isset($_POST['acao']) && $_POST['acao'] === 'aceitar' && isset($_SESSION['funcionario'])) {
+if (isset($_POST['acao']) && $_POST['acao'] === 'aceitar' && isset($_SESSION['utilizador']) && $_SESSION['utilizador']['cargo'] === 'funcionario') {
     $pedido_id = (int)$_POST['pedido_id'];
-    $func_id   = (int)$_SESSION['funcionario']['id'];
+    $func_id   = (int)$_SESSION['utilizador']['id'];
  
     // Só aceita se o pedido ainda estiver pendente
     $conn->query("UPDATE pedidos SET estado='aceite', funcionario_id=$func_id WHERE id=$pedido_id AND estado='pendente'");
@@ -37,9 +37,9 @@ if (isset($_POST['acao']) && $_POST['acao'] === 'aceitar' && isset($_SESSION['fu
     exit;
 }
  
-if (isset($_POST['acao']) && $_POST['acao'] === 'concluir' && isset($_SESSION['funcionario'])) {
+if (isset($_POST['acao']) && $_POST['acao'] === 'concluir' && isset($_SESSION['utilizador']) && $_SESSION['utilizador']['cargo'] === 'funcionario') {
     $pedido_id = (int)$_POST['pedido_id'];
-    $func_id   = (int)$_SESSION['funcionario']['id'];
+    $func_id   = (int)$_SESSION['utilizador']['id'];
  
     // Só o funcionário que aceitou pode marcar como concluído
     $conn->query("UPDATE pedidos SET estado='concluido' WHERE id=$pedido_id AND funcionario_id=$func_id");
@@ -52,7 +52,7 @@ if (isset($_POST['acao']) && $_POST['acao'] === 'concluir' && isset($_SESSION['f
 }
  
 $pedidos = [];
-if (isset($_SESSION['funcionario'])) {
+if (isset($_SESSION['utilizador']) && $_SESSION['utilizador']['cargo'] === 'funcionario') {
     // Mostra todos os pedidos, do mais recente para o mais antigo
     $resultado = $conn->query("SELECT * FROM pedidos ORDER BY criado_em DESC");
     while ($linha = $resultado->fetch_assoc()) {
@@ -68,7 +68,7 @@ require '../Modules/header.php';
 ?>
 <div class="pagina">
  
-    <?php if (!isset($_SESSION['funcionario'])): ?>
+    <?php if (!isset($_SESSION['utilizador']) || $_SESSION['utilizador']['cargo'] !== 'funcionario'): ?>
  
         <!-- Formulário de login -->
         <div class="caixa-login aparecer">
@@ -92,7 +92,7 @@ require '../Modules/header.php';
     <?php else: ?>
  
         <div class="barra-topo">
-            <span>Olá, <strong><?php echo htmlspecialchars($_SESSION['funcionario']['nome']); ?></strong></span>
+            <span>Olá, <strong><?php echo htmlspecialchars($_SESSION['utilizador']['nome']); ?></strong></span>
         </div>
  
         <div class="titulo-pagina">
@@ -137,7 +137,7 @@ require '../Modules/header.php';
                             "<?php echo htmlspecialchars($p['descricao']); ?>"
                         </div>
  
-                        <?php $meu_id = (int)$_SESSION['funcionario']['id']; ?>
+                        <?php $meu_id = (int)$_SESSION['utilizador']['id']; ?>
  
                         <?php if ($p['estado'] === 'pendente'): ?>
                             <form method="POST">
