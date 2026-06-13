@@ -1,0 +1,80 @@
+/* estilos da pagina de servicos */
+
+/* lista de servicos com linha separadora */
+
+a.linha-servico {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+}
+
+.lista-servicos {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.linha-servico {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 0;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+.linha-servico:hover .seta-servico {
+  color: #ff6b00;
+  transform: translateX(4px);
+}
+
+.seta-servico {
+  font-size: 1.5rem;
+  color: #aaa;
+  transition: all 0.2s;
+}
+
+.conteudo-linha-servico h3 {
+  font-size: 1.2rem;
+  color: #08111f;
+  margin-bottom: 6px;
+}
+
+.conteudo-linha-servico p {
+  color: #555;
+  font-size: 14px;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* caixa azul la em baixo com chamada pra contacto */
+.caixa-cta {
+  background: #ff6b00;
+  border-radius: 16px;
+  padding: 60px;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.caixa-cta h2 {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.caixa-cta p {
+  color: rgba(255,255,255,0.75);
+  margin-bottom: 28px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.caixa-cta .botao-principal {
+  background: white;
+  color: #ff6b00;
+}
+
+.caixa-cta .botao-principal:hover {
+  background: #f0f4ff;
+}
