@@ -6,19 +6,19 @@ require '../Modules/header.php';
 ?>
 
 <!-- Cabeçalho da página -->
-<section class="cabecalho-pagina">
+<section>
 
   <!-- Caixa que centraliza o conteúdo do cabeçalho -->
-  <div class="cabecalho-pagina-interior">
+  <div>
 
     <!-- Texto pequeno acima do título -->
-    <span class="etiqueta-secao" style="color: #00aaee;">Galeria</span>
+    <span>Galeria</span>
 
     <!-- Título principal da página -->
-    <h1 class="aparecer">Trabalhos de Reparação</h1>
+    <h1>Trabalhos de Reparação</h1>
 
     <!-- Descrição da página -->
-    <p class="aparecer atraso-1">
+    <p>
       Aqui mostramos alguns serviços de reparação já feitos pela nossa equipa.
     </p>
 
@@ -32,36 +32,36 @@ require '../Modules/header.php';
 <main class="galeria-main">
 
   <!-- Texto pequeno da secção -->
-  <span class="etiqueta-secao">Reparações feitas</span>
+  <span>Reparações feitas</span>
 
   <!-- Título da secção -->
-  <h2 class="titulo-secao">Os nossos trabalhos</h2>
+  <h2>Os nossos trabalhos</h2>
 
   <!-- Descrição da secção -->
-  <p class="subtitulo-secao">
+  <p>
     Esta página serve para apresentar alguns serviços de reparação, manutenção e montagem já realizados pela MestreTech.
   </p>
 
   <!-- Grelha onde ficam os cartões -->
-  <div class="galeria-grid" style="margin-top: 40px;">
+  <div>
 
     <!-- Primeiro cartão -->
-    <div class="evento-card aparecer">
+    <div>
 
       <!-- Caixa da imagem -->
-      <div class="evento-card-img">
+      <div>
 
         <!-- Imagem da reparação da PS4 -->
-        <img src="../images/placaps4.png" alt="Reparação de PS4">
+        <img src="../images/placaps4.png">
 
         <!-- Etiqueta do cartão -->
-        <span class="evento-card-tag">Reparação</span>
+        <span>Reparação</span>
 
       <!-- Fim da caixa da imagem -->
       </div>
 
       <!-- Corpo do cartão -->
-      <div class="evento-card-corpo">
+      <div>
 
         <!-- Título do trabalho -->
         <h3>Reparação de PS4</h3>
@@ -72,7 +72,7 @@ require '../Modules/header.php';
         </p>
 
         <!-- Informações extras -->
-        <div class="evento-card-meta">
+        <div>
 
           <!-- Data do trabalho -->
           <span>15 de Março, 2026</span>
@@ -90,22 +90,22 @@ require '../Modules/header.php';
     </div>
 
     <!-- Segundo cartão -->
-    <div class="evento-card aparecer atraso-1">
+    <div>
 
       <!-- Caixa da imagem -->
-      <div class="evento-card-img">
+      <div>
 
         <!-- Imagem da reparação do computador -->
-        <img src="../images/concertopc.png" alt="Reparação de computador">
+        <img src="../images/concertopc.png">
 
         <!-- Etiqueta do cartão -->
-        <span class="evento-card-tag">Reparação</span>
+        <span>Reparação</span>
 
       <!-- Fim da caixa da imagem -->
       </div>
 
       <!-- Corpo do cartão -->
-      <div class="evento-card-corpo">
+      <div>
 
         <!-- Título do trabalho -->
         <h3>Reparação de computador</h3>
@@ -116,7 +116,7 @@ require '../Modules/header.php';
         </p>
 
         <!-- Informações extras -->
-        <div class="evento-card-meta">
+        <div>
 
           <!-- Data do trabalho -->
           <span>15 de Março, 2026</span>
@@ -134,22 +134,22 @@ require '../Modules/header.php';
     </div>
 
     <!-- Terceiro cartão -->
-    <div class="evento-card aparecer atraso-2">
+    <div>
 
       <!-- Caixa da imagem -->
-      <div class="evento-card-img">
+      <div>
 
         <!-- Imagem da montagem do computador -->
-        <img src="../images/montagem.png" alt="Montagem de computador">
+        <img src="../images/montagem.png" >
 
         <!-- Etiqueta do cartão -->
-        <span class="evento-card-tag">Montagem</span>
+        <span>Montagem</span>
 
       <!-- Fim da caixa da imagem -->
       </div>
 
       <!-- Corpo do cartão -->
-      <div class="evento-card-corpo">
+      <div>
 
         <!-- Título do trabalho -->
         <h3>Montagem de computador</h3>
@@ -160,7 +160,7 @@ require '../Modules/header.php';
         </p>
 
         <!-- Informações extras -->
-        <div class="evento-card-meta">
+        <div>
 
           <!-- Data do trabalho -->
           <span>15 de Março, 2026</span>
@@ -178,22 +178,22 @@ require '../Modules/header.php';
     </div>
 
     <!-- Quarto cartão -->
-    <div class="evento-card aparecer atraso-3">
+    <div>
 
       <!-- Caixa da imagem -->
-      <div class="evento-card-img">
+      <div>
 
         <!-- Imagem da manutenção do notebook -->
-        <img src="../images/portatil.png" alt="Manutenção de notebook">
+        <img src="../images/portatil.png">
 
         <!-- Etiqueta do cartão -->
-        <span class="evento-card-tag">Manutenção</span>
+        <span>Manutenção</span>
 
       <!-- Fim da caixa da imagem -->
       </div>
 
       <!-- Corpo do cartão -->
-      <div class="evento-card-corpo">
+      <div>
 
         <!-- Título do trabalho -->
         <h3>Manutenção de notebook</h3>
@@ -204,7 +204,7 @@ require '../Modules/header.php';
         </p>
 
         <!-- Informações extras -->
-        <div class="evento-card-meta">
+        <div>
 
           <!-- Data do trabalho -->
           <span>20 de Janeiro, 2026</span>
@@ -225,8 +225,8 @@ require '../Modules/header.php';
   </div>
 
   <!-- Botão para voltar à galeria -->
-  <a href="galery.php" class="botao-principal" style="margin-top: 40px;">Voltar para a Galeria</a>
-
+  <a href="galery.php">Voltar para a Galeria</a>
+ 
 <!-- Fim da parte principal -->
 </main>
 
