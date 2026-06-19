@@ -100,4 +100,9 @@
   .login-frase { max-width: 100%; }
   .login-direita { padding: 30px 20px; }
   .caixa-login { padding: 28px 20px; }
+  .login-esquerda {
+  flex: 0 0 auto;
+  min-height: auto;
+  padding: 30px 24px;
+}
 }
