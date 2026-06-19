@@ -63,3 +63,14 @@
   flex-direction: column;
   gap: 16px;
 }
+
+@media (max-width: 900px) {
+  .grelha-sobre { grid-template-columns: 1fr; gap: 30px; }
+  .grelha-equipa { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .grelha-equipa { grid-template-columns: 1fr; }
+  .bloco-missao { padding: 32px 20px; }
+  .bloco-missao h2 { font-size: 1.4rem; }
+}

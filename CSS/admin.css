@@ -200,3 +200,12 @@
             padding: 40px;
             color: #aaa;
         }
+
+@media (max-width: 768px) {
+  .linha-form { grid-template-columns: 1fr; }
+  .caixa-adicionar { padding: 20px 16px; }
+  .caixa-lista { overflow-x: auto; }
+  table { min-width: 500px; }
+  .titulo-pagina h1 { font-size: 1.4rem; }
+  .caixa-login { margin: 40px auto; padding: 28px 20px; }
+}

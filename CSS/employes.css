@@ -201,3 +201,15 @@
             margin-bottom: 16px;
             font-size: 14px;
         }
+
+@media (max-width: 768px) {
+  .pagina { padding: 20px 16px; }
+  .cartao { padding: 16px; }
+  .cartao-topo { flex-direction: column; }
+  .titulo-pagina h1 { font-size: 1.4rem; }
+  .caixa-login { margin: 40px auto; padding: 28px 20px; }
+}
+
+@media (max-width: 480px) {
+  .botao-aceitar, .botao-concluir { width: 100%; }
+}

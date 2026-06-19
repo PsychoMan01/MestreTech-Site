@@ -78,3 +78,13 @@ a.linha-servico {
 .caixa-cta .botao-principal:hover {
   background: #f0f4ff;
 }
+
+@media (max-width: 768px) {
+  .linha-servico { padding: 20px 0; }
+  .caixa-cta { padding: 36px 20px; }
+  .caixa-cta h2 { font-size: 1.5rem; }
+}
+
+@media (max-width: 480px) {
+  .seta-servico { display: none; }
+}

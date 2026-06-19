@@ -111,3 +111,11 @@
   font-size: 14px;
   text-align: center;
 }
+
+@media (max-width: 900px) {
+  .grelha-contacto { grid-template-columns: 1fr; gap: 30px; }
+}
+
+@media (max-width: 600px) {
+  .formulario-contacto { padding: 24px 16px; }
+}

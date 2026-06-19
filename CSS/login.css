@@ -92,3 +92,12 @@
   margin-bottom: 16px;
   font-size: 14px;
 }
+
+@media (max-width: 768px) {
+  .secao-login { flex-direction: column; }
+  .login-esquerda { padding: 40px 24px; align-items: center; text-align: center; }
+  .logo-grande { font-size: 2rem; }
+  .login-frase { max-width: 100%; }
+  .login-direita { padding: 30px 20px; }
+  .caixa-login { padding: 28px 20px; }
+}

@@ -149,3 +149,9 @@
             font-size: 14px;
             font-weight: bold;
         }
+
+@media (max-width: 640px) {
+  .pagina { padding: 30px 16px; }
+  .caixa { padding: 24px 16px; }
+  .dois-campos { grid-template-columns: 1fr; gap: 0; }
+}

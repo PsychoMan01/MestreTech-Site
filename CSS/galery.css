@@ -188,3 +188,10 @@
   padding: 60px 20px;
   color: #555;
 }
+
+@media (max-width: 768px) {
+  .galeria-banner { padding: 50px 20px; }
+  .galeria-banner h1 { font-size: 1.8rem; }
+  .galeria-filtros-interior { flex-direction: column; align-items: flex-start; }
+  .galeria-grid { grid-template-columns: 1fr; }
+}
