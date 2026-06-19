@@ -1,15 +1,15 @@
 <?php
 $pagina_atual = 'reparos';
 $titulo_pagina = 'MestreTech';
-$css_extra = ['../CSS/repairs.css'];
+$css_extra = ['../CSS/reparos.css'];
 require '../Modules/header.php';
 ?>
 
-<!-- Cabeçalho da página -->
-<section>
+<!-- Começa o cabeçalho da página -->
+<section class="cabecalho-trabalhos">
 
-  <!-- Caixa que centraliza o conteúdo do cabeçalho -->
-  <div>
+  <!-- Caixa do cabeçalho -->
+  <div class="cabecalho-caixa">
 
     <!-- Texto pequeno acima do título -->
     <span>Galeria</span>
@@ -17,19 +17,19 @@ require '../Modules/header.php';
     <!-- Título principal da página -->
     <h1>Trabalhos de Reparação</h1>
 
-    <!-- Descrição da página -->
+    <!-- Texto explicativo da página -->
     <p>
       Aqui mostramos alguns serviços de reparação já feitos pela nossa equipa.
     </p>
 
-  <!-- Fim da caixa do cabeçalho -->
+  <!-- Fecha a caixa do cabeçalho -->
   </div>
 
-<!-- Fim do cabeçalho da página -->
+<!-- Fecha o cabeçalho da página -->
 </section>
 
-<!-- Parte principal da página -->
-<main class="galeria-main">
+<!-- Começa a parte principal da página -->
+<main class="pagina-reparos">
 
   <!-- Texto pequeno da secção -->
   <span>Reparações feitas</span>
@@ -43,25 +43,25 @@ require '../Modules/header.php';
   </p>
 
   <!-- Grelha onde ficam os cartões -->
-  <div>
+  <div class="grelha-reparos">
 
     <!-- Primeiro cartão -->
-    <div>
+    <div class="cartao-reparo">
 
-      <!-- Caixa da imagem -->
-      <div>
+      <!-- Parte da imagem -->
+      <div class="imagem-reparo">
 
-        <!-- Imagem da reparação da PS4 -->
-        <img src="../images/placaps4.png">
+        <!-- Imagem do trabalho -->
+        <img src="../images/placaps4.png" alt="Reparação de PS4">
 
         <!-- Etiqueta do cartão -->
         <span>Reparação</span>
 
-      <!-- Fim da caixa da imagem -->
+      <!-- Fecha a parte da imagem -->
       </div>
 
-      <!-- Corpo do cartão -->
-      <div>
+      <!-- Parte do texto -->
+      <div class="texto-reparo">
 
         <!-- Título do trabalho -->
         <h3>Reparação de PS4</h3>
@@ -71,41 +71,35 @@ require '../Modules/header.php';
           Serviço de diagnóstico e reparação de consola PS4, incluindo verificação de componentes internos.
         </p>
 
-        <!-- Informações extras -->
-        <div>
-
-          <!-- Data do trabalho -->
+        <!-- Data e local -->
+        <div class="info-reparo">
           <span>15 de Março, 2026</span>
-
-          <!-- Local do trabalho -->
           <span>Mindelo</span>
-
-        <!-- Fim das informações extras -->
         </div>
 
-      <!-- Fim do corpo do cartão -->
+      <!-- Fecha a parte do texto -->
       </div>
 
-    <!-- Fim do primeiro cartão -->
+    <!-- Fecha o primeiro cartão -->
     </div>
 
     <!-- Segundo cartão -->
-    <div>
+    <div class="cartao-reparo">
 
-      <!-- Caixa da imagem -->
-      <div>
+      <!-- Parte da imagem -->
+      <div class="imagem-reparo">
 
-        <!-- Imagem da reparação do computador -->
-        <img src="../images/concertopc.png">
+        <!-- Imagem do trabalho -->
+        <img src="../images/concertopc.png" alt="Reparação de computador">
 
         <!-- Etiqueta do cartão -->
         <span>Reparação</span>
 
-      <!-- Fim da caixa da imagem -->
+      <!-- Fecha a parte da imagem -->
       </div>
 
-      <!-- Corpo do cartão -->
-      <div>
+      <!-- Parte do texto -->
+      <div class="texto-reparo">
 
         <!-- Título do trabalho -->
         <h3>Reparação de computador</h3>
@@ -115,41 +109,35 @@ require '../Modules/header.php';
           Diagnóstico de problemas em computador, limpeza e resolução de falhas de hardware ou software.
         </p>
 
-        <!-- Informações extras -->
-        <div>
-
-          <!-- Data do trabalho -->
+        <!-- Data e local -->
+        <div class="info-reparo">
           <span>15 de Março, 2026</span>
-
-          <!-- Local do trabalho -->
           <span>Mindelo</span>
-
-        <!-- Fim das informações extras -->
         </div>
 
-      <!-- Fim do corpo do cartão -->
+      <!-- Fecha a parte do texto -->
       </div>
 
-    <!-- Fim do segundo cartão -->
+    <!-- Fecha o segundo cartão -->
     </div>
 
     <!-- Terceiro cartão -->
-    <div>
+    <div class="cartao-reparo">
 
-      <!-- Caixa da imagem -->
-      <div>
+      <!-- Parte da imagem -->
+      <div class="imagem-reparo">
 
-        <!-- Imagem da montagem do computador -->
-        <img src="../images/montagem.png" >
+        <!-- Imagem do trabalho -->
+        <img src="../images/montagem.png" alt="Montagem de computador">
 
         <!-- Etiqueta do cartão -->
         <span>Montagem</span>
 
-      <!-- Fim da caixa da imagem -->
+      <!-- Fecha a parte da imagem -->
       </div>
 
-      <!-- Corpo do cartão -->
-      <div>
+      <!-- Parte do texto -->
+      <div class="texto-reparo">
 
         <!-- Título do trabalho -->
         <h3>Montagem de computador</h3>
@@ -159,41 +147,35 @@ require '../Modules/header.php';
           Montagem de computador com peças fornecidas pelo cliente, deixando o equipamento pronto para uso.
         </p>
 
-        <!-- Informações extras -->
-        <div>
-
-          <!-- Data do trabalho -->
+        <!-- Data e local -->
+        <div class="info-reparo">
           <span>15 de Março, 2026</span>
-
-          <!-- Local do trabalho -->
           <span>Mindelo</span>
-
-        <!-- Fim das informações extras -->
         </div>
 
-      <!-- Fim do corpo do cartão -->
+      <!-- Fecha a parte do texto -->
       </div>
 
-    <!-- Fim do terceiro cartão -->
+    <!-- Fecha o terceiro cartão -->
     </div>
 
     <!-- Quarto cartão -->
-    <div>
+    <div class="cartao-reparo">
 
-      <!-- Caixa da imagem -->
-      <div>
+      <!-- Parte da imagem -->
+      <div class="imagem-reparo">
 
-        <!-- Imagem da manutenção do notebook -->
-        <img src="../images/portatil.png">
+        <!-- Imagem do trabalho -->
+        <img src="../images/portatil.png" alt="Manutenção de notebook">
 
         <!-- Etiqueta do cartão -->
         <span>Manutenção</span>
 
-      <!-- Fim da caixa da imagem -->
+      <!-- Fecha a parte da imagem -->
       </div>
 
-      <!-- Corpo do cartão -->
-      <div>
+      <!-- Parte do texto -->
+      <div class="texto-reparo">
 
         <!-- Título do trabalho -->
         <h3>Manutenção de notebook</h3>
@@ -203,31 +185,25 @@ require '../Modules/header.php';
           Verificação do estado do notebook, limpeza básica e análise de possíveis problemas no equipamento.
         </p>
 
-        <!-- Informações extras -->
-        <div>
-
-          <!-- Data do trabalho -->
+        <!-- Data e local -->
+        <div class="info-reparo">
           <span>20 de Janeiro, 2026</span>
-
-          <!-- Local do trabalho -->
           <span>Mindelo</span>
-
-        <!-- Fim das informações extras -->
         </div>
 
-      <!-- Fim do corpo do cartão -->
+      <!-- Fecha a parte do texto -->
       </div>
 
-    <!-- Fim do quarto cartão -->
+    <!-- Fecha o quarto cartão -->
     </div>
 
-  <!-- Fim da grelha dos cartões -->
+  <!-- Fecha a grelha dos cartões -->
   </div>
 
   <!-- Botão para voltar à galeria -->
   <a href="galery.php">Voltar para a Galeria</a>
- 
-<!-- Fim da parte principal -->
+
+<!-- Fecha a parte principal -->
 </main>
 
 <?php

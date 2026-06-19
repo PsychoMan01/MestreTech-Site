@@ -1,0 +1,168 @@
+/* Cabeçalho da página */
+.cabecalho-trabalhos {
+  background: #08111f;
+  padding: 70px 20px;
+}
+
+/* Caixa do cabeçalho */
+.cabecalho-caixa {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Texto pequeno do cabeçalho */
+.cabecalho-caixa span {
+  color: #00aaee;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Título principal */
+.cabecalho-caixa h1 {
+  color: white;
+  font-size: 2.5rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Texto do cabeçalho */
+.cabecalho-caixa p {
+  color: #d6d6d6;
+  max-width: 650px;
+  line-height: 1.6;
+}
+
+/* Parte principal da página */
+.pagina-personalizacoes {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+/* Texto pequeno da secção */
+.pagina-personalizacoes span {
+  color: #0044cc;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Título da secção */
+.pagina-personalizacoes h2 {
+  color: #08111f;
+  font-size: 2.2rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Texto da secção */
+.pagina-personalizacoes p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Grelha dos cartões */
+.grelha-personalizacoes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 40px;
+}
+
+/* Cartão de personalização */
+.cartao-personalizacao {
+  background: white;
+  border: 1px solid #ddddee;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Pequeno efeito no cartão */
+.cartao-personalizacao:hover {
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* Caixa da imagem */
+.imagem-personalizacao {
+  position: relative;
+}
+
+/* Imagem do cartão */
+.imagem-personalizacao img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Etiqueta da imagem */
+.imagem-personalizacao span {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #0044cc;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+/* Parte do texto */
+.texto-personalizacao {
+  padding: 20px;
+}
+
+/* Título do cartão */
+.texto-personalizacao h3 {
+  color: #08111f;
+  margin-bottom: 8px;
+}
+
+/* Texto do cartão */
+.texto-personalizacao p {
+  color: #555;
+  font-size: 14px;
+}
+
+/* Data e local */
+.info-personalizacao {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 14px;
+}
+
+/* Texto da data e local */
+.info-personalizacao span {
+  color: #888;
+  font-size: 12px;
+  text-transform: none;
+}
+
+/* Botão de voltar */
+.pagina-personalizacoes a {
+  display: inline-block;
+  margin-top: 40px;
+  background: #0044cc;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Efeito do botão */
+.pagina-personalizacoes a:hover {
+  background: #002fa0;
+}
+
+/* Ajuste para telemóvel */
+@media (max-width: 800px) {
+  .grelha-personalizacoes {
+    grid-template-columns: 1fr;
+  }
+
+  .cabecalho-caixa h1 {
+    font-size: 2rem;
+  }
+}

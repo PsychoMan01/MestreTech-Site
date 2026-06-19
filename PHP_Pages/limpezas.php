@@ -1,14 +1,15 @@
 <?php
-$pagina_atual = 'reparos';
+$pagina_atual = 'limpezas';
 $titulo_pagina = 'MestreTech';
-$css_extra = ['../CSS/repairs.css'];
+$css_extra = ['../CSS/limpezas.css'];
 require '../Modules/header.php';
 ?>
-<!-- Começa o cabeçalho da página -->
-<section>
 
-  <!-- Caixa interna do cabeçalho -->
-  <div>
+<!-- Começa o cabeçalho da página -->
+<section class="cabecalho-trabalhos">
+
+  <!-- Caixa do cabeçalho -->
+  <div class="cabecalho-caixa">
 
     <!-- Texto pequeno acima do título -->
     <span>Galeria</span>
@@ -16,19 +17,19 @@ require '../Modules/header.php';
     <!-- Título principal da página -->
     <h1>Trabalhos de Limpeza</h1>
 
-    <!-- Pequena explicação da página -->
+    <!-- Texto explicativo da página -->
     <p>
       Aqui mostramos alguns serviços de limpeza e manutenção feitos pela MestreTech.
     </p>
 
-  <!-- Fecha a caixa interna do cabeçalho -->
+  <!-- Fecha a caixa do cabeçalho -->
   </div>
 
 <!-- Fecha o cabeçalho da página -->
 </section>
 
 <!-- Começa a parte principal da página -->
-<main class="galeria-main">
+<main class="pagina-limpezas">
 
   <!-- Texto pequeno da secção -->
   <span>Limpezas feitas</span>
@@ -36,31 +37,31 @@ require '../Modules/header.php';
   <!-- Título da secção -->
   <h2>Os nossos trabalhos</h2>
 
-  <!-- Descrição simples da secção -->
+  <!-- Descrição da secção -->
   <p>
     Nesta página colocamos exemplos de equipamentos que passaram por limpeza ou manutenção.
   </p>
 
   <!-- Grelha onde ficam os cartões -->
-  <div>
+  <div class="grelha-limpezas">
 
     <!-- Primeiro cartão -->
-    <div>
+    <div class="cartao-limpeza">
 
-      <!-- Caixa da imagem -->
-      <div>
+      <!-- Parte da imagem -->
+      <div class="imagem-limpeza">
 
-        <!-- Imagem da limpeza de notebook -->
-        <img src="../images/portatil.png">
+        <!-- Imagem do trabalho -->
+        <img src="../images/portatil.png" alt="Limpeza de notebook">
 
         <!-- Etiqueta do cartão -->
         <span>Limpeza</span>
 
-      <!-- Fecha a caixa da imagem -->
+      <!-- Fecha a parte da imagem -->
       </div>
 
-      <!-- Corpo do cartão -->
-      <div>
+      <!-- Parte do texto -->
+      <div class="texto-limpeza">
 
         <!-- Título do trabalho -->
         <h3>Limpeza de notebook</h3>
@@ -70,41 +71,35 @@ require '../Modules/header.php';
           Limpeza interna do notebook, remoção de poeira e verificação do estado geral do equipamento.
         </p>
 
-        <!-- Informações extras -->
-        <div>
-
-          <!-- Data do trabalho -->
+        <!-- Data e local -->
+        <div class="info-limpeza">
           <span>20 de Janeiro, 2026</span>
-
-          <!-- Local do trabalho -->
           <span>Mindelo</span>
-
-        <!-- Fecha as informações extras -->
         </div>
 
-      <!-- Fecha o corpo do cartão -->
+      <!-- Fecha a parte do texto -->
       </div>
 
     <!-- Fecha o primeiro cartão -->
     </div>
 
     <!-- Segundo cartão -->
-    <div>
+    <div class="cartao-limpeza">
 
-      <!-- Caixa da imagem -->
-      <div>
+      <!-- Parte da imagem -->
+      <div class="imagem-limpeza">
 
-        <!-- Imagem usada para representar limpeza de computador -->
-        <img src="../images/concertopc.png">
+        <!-- Imagem do trabalho -->
+        <img src="../images/concertopc.png" alt="Limpeza de computador">
 
         <!-- Etiqueta do cartão -->
         <span>Manutenção</span>
 
-      <!-- Fecha a caixa da imagem -->
+      <!-- Fecha a parte da imagem -->
       </div>
 
-      <!-- Corpo do cartão -->
-      <div>
+      <!-- Parte do texto -->
+      <div class="texto-limpeza">
 
         <!-- Título do trabalho -->
         <h3>Limpeza de computador</h3>
@@ -114,41 +109,35 @@ require '../Modules/header.php';
           Limpeza de componentes internos para ajudar a reduzir aquecimento e melhorar o funcionamento.
         </p>
 
-        <!-- Informações extras -->
-        <div>
-
-          <!-- Data do trabalho -->
+        <!-- Data e local -->
+        <div class="info-limpeza">
           <span>20 de Janeiro, 2026</span>
-
-          <!-- Local do trabalho -->
           <span>Mindelo</span>
-
-        <!-- Fecha as informações extras -->
         </div>
 
-      <!-- Fecha o corpo do cartão -->
+      <!-- Fecha a parte do texto -->
       </div>
 
     <!-- Fecha o segundo cartão -->
     </div>
 
     <!-- Terceiro cartão -->
-    <div>
+    <div class="cartao-limpeza">
 
-      <!-- Caixa da imagem -->
-      <div>
+      <!-- Parte da imagem -->
+      <div class="imagem-limpeza">
 
-        <!-- Imagem usada para representar limpeza de consola -->
-        <img src="../images/placaps4.png">
+        <!-- Imagem do trabalho -->
+        <img src="../images/placaps4.png" alt="Limpeza de PS4">
 
         <!-- Etiqueta do cartão -->
         <span>Limpeza</span>
 
-      <!-- Fecha a caixa da imagem -->
+      <!-- Fecha a parte da imagem -->
       </div>
 
-      <!-- Corpo do cartão -->
-      <div>
+      <!-- Parte do texto -->
+      <div class="texto-limpeza">
 
         <!-- Título do trabalho -->
         <h3>Limpeza de PS4</h3>
@@ -158,19 +147,13 @@ require '../Modules/header.php';
           Limpeza da consola para ajudar a diminuir aquecimento, barulho e melhorar o desempenho.
         </p>
 
-        <!-- Informações extras -->
-        <div class="evento-card-meta">
-
-          <!-- Data do trabalho -->
+        <!-- Data e local -->
+        <div class="info-limpeza">
           <span>20 de Janeiro, 2026</span>
-
-          <!-- Local do trabalho -->
           <span>Mindelo</span>
-
-        <!-- Fecha as informações extras -->
         </div>
 
-      <!-- Fecha o corpo do cartão -->
+      <!-- Fecha a parte do texto -->
       </div>
 
     <!-- Fecha o terceiro cartão -->

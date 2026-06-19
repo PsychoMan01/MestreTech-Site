@@ -1,15 +1,14 @@
 <?php
-$pagina_atual = 'reparos';
+$pagina_atual = 'personalizacoes';
 $titulo_pagina = 'MestreTech';
-$css_extra = ['../CSS/repairs.css'];
+$css_extra = ['../CSS/personalizacoes.css'];
 require '../Modules/header.php';
 ?>
-
 <!-- Começa o cabeçalho da página -->
-<section class="cabecalho-pagina">
+<section class="cabecalho-trabalhos">
 
-  <!-- Caixa interna do cabeçalho -->
-  <div>
+  <!-- Caixa do cabeçalho -->
+  <div class="cabecalho-caixa">
 
     <!-- Texto pequeno acima do título -->
     <span>Galeria</span>
@@ -17,19 +16,19 @@ require '../Modules/header.php';
     <!-- Título principal da página -->
     <h1>Trabalhos de Personalização</h1>
 
-    <!-- Pequena explicação da página -->
+    <!-- Texto explicativo da página -->
     <p>
       Aqui mostramos alguns trabalhos de personalização feitos pela MestreTech.
     </p>
 
-  <!-- Fecha a caixa interna do cabeçalho -->
+  <!-- Fecha a caixa do cabeçalho -->
   </div>
 
 <!-- Fecha o cabeçalho da página -->
 </section>
 
 <!-- Começa a parte principal da página -->
-<main>
+<main class="pagina-personalizacoes">
 
   <!-- Texto pequeno da secção -->
   <span>Personalizações feitas</span>
@@ -37,31 +36,31 @@ require '../Modules/header.php';
   <!-- Título da secção -->
   <h2>Os nossos trabalhos</h2>
 
-  <!-- Descrição simples da secção -->
+  <!-- Descrição da secção -->
   <p>
     Nesta página colocamos exemplos de consolas e equipamentos personalizados para clientes.
   </p>
 
   <!-- Grelha onde ficam os cartões -->
-  <div>
+  <div class="grelha-personalizacoes">
 
     <!-- Primeiro cartão -->
-    <div>
+    <div class="cartao-personalizacao">
 
-      <!-- Caixa da imagem -->
-      <div>
+      <!-- Parte da imagem -->
+      <div class="imagem-personalizacao">
 
-        <!-- Imagem da personalização de Xbox -->
-        <img src="../images/xbox.png">
+        <!-- Imagem do trabalho -->
+        <img src="../images/xbox.png" alt="Personalização de XBOX">
 
         <!-- Etiqueta do cartão -->
         <span>Personalização</span>
 
-      <!-- Fecha a caixa da imagem -->
+      <!-- Fecha a parte da imagem -->
       </div>
 
-      <!-- Corpo do cartão -->
-      <div>
+      <!-- Parte do texto -->
+      <div class="texto-personalizacao">
 
         <!-- Título do trabalho -->
         <h3>Personalização de XBOX</h3>
@@ -71,41 +70,35 @@ require '../Modules/header.php';
           Aplicação de skin personalizada para dar um novo visual à consola e proteger contra riscos.
         </p>
 
-        <!-- Informações extras -->
-        <div>
-
-          <!-- Data do trabalho -->
+        <!-- Data e local -->
+        <div class="info-personalizacao">
           <span>2 de Fevereiro, 2026</span>
-
-          <!-- Local do trabalho -->
           <span>Mindelo</span>
-
-        <!-- Fecha as informações extras -->
         </div>
 
-      <!-- Fecha o corpo do cartão -->
+      <!-- Fecha a parte do texto -->
       </div>
 
     <!-- Fecha o primeiro cartão -->
     </div>
 
     <!-- Segundo cartão -->
-    <div>
+    <div class="cartao-personalizacao">
 
-      <!-- Caixa da imagem -->
-      <div>
+      <!-- Parte da imagem -->
+      <div class="imagem-personalizacao">
 
-        <!-- Imagem da PlayStation personalizada -->
-        <img src="../images/Ps4_rony.jpg">
+        <!-- Imagem do trabalho -->
+        <img src="../images/Ps4_rony.jpg" alt="PlayStation personalizada">
 
         <!-- Etiqueta do cartão -->
         <span>Personalização</span>
 
-      <!-- Fecha a caixa da imagem -->
+      <!-- Fecha a parte da imagem -->
       </div>
 
-      <!-- Corpo do cartão -->
-      <div>
+      <!-- Parte do texto -->
+      <div class="texto-personalizacao">
 
         <!-- Título do trabalho -->
         <h3>PlayStation personalizada</h3>
@@ -115,41 +108,35 @@ require '../Modules/header.php';
           Personalização de PlayStation com adesivo escolhido pelo cliente, deixando a consola com um estilo único.
         </p>
 
-        <!-- Informações extras -->
-        <div>
-
-          <!-- Data do trabalho -->
+        <!-- Data e local -->
+        <div class="info-personalizacao">
           <span>2 de Fevereiro, 2026</span>
-
-          <!-- Local do trabalho -->
           <span>Mindelo</span>
-
-        <!-- Fecha as informações extras -->
         </div>
 
-      <!-- Fecha o corpo do cartão -->
+      <!-- Fecha a parte do texto -->
       </div>
 
     <!-- Fecha o segundo cartão -->
     </div>
 
     <!-- Terceiro cartão -->
-    <div>
+    <div class="cartao-personalizacao">
 
-      <!-- Caixa da imagem -->
-      <div>
+      <!-- Parte da imagem -->
+      <div class="imagem-personalizacao">
 
-        <!-- Outra imagem de personalização -->
-        <img src="../images/ps4_rony2.jpg">
+        <!-- Imagem do trabalho -->
+        <img src="../images/ps4_rony2.jpg" alt="Skin personalizada">
 
         <!-- Etiqueta do cartão -->
         <span>Skin</span>
 
-      <!-- Fecha a caixa da imagem -->
+      <!-- Fecha a parte da imagem -->
       </div>
 
-      <!-- Corpo do cartão -->
-      <div>
+      <!-- Parte do texto -->
+      <div class="texto-personalizacao">
 
         <!-- Título do trabalho -->
         <h3>Skin personalizada</h3>
@@ -159,19 +146,13 @@ require '../Modules/header.php';
           Criação e aplicação de adesivo personalizado, de acordo com o tema escolhido pelo cliente.
         </p>
 
-        <!-- Informações extras -->
-        <div>
-
-          <!-- Data do trabalho -->
+        <!-- Data e local -->
+        <div class="info-personalizacao">
           <span>2 de Fevereiro, 2026</span>
-
-          <!-- Local do trabalho -->
           <span>Mindelo</span>
-
-        <!-- Fecha as informações extras -->
         </div>
 
-      <!-- Fecha o corpo do cartão -->
+      <!-- Fecha a parte do texto -->
       </div>
 
     <!-- Fecha o terceiro cartão -->
