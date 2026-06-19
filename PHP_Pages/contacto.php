@@ -60,12 +60,12 @@ require '../Modules/header.php';
 
       <div class="grupo-campo">
         <label for="assunto">Assunto</label>
-        <input type="text" id="assunto" placeholder="Ex: Quero reparar o meu computador">
+        <input type="text" id="assunto" placeholder="Ex: Quero saber o preço de um serviço" required>
       </div>
 
       <div class="grupo-campo">
         <label for="mensagem">Mensagem</label>
-        <textarea id="mensagem" placeholder="Explica o teu problema ou o que precisas..." required></textarea>
+        <textarea id="mensagem" placeholder="Explica o que precisas..." required></textarea>
       </div>
 
       <button type="button" id="btnEnviar" class="botao-enviar" onclick="enviarMensagem()">Enviar</button>
