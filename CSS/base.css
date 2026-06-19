@@ -374,9 +374,14 @@ footer {
 /* Dropdown do menu */
 .dropdown {
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .dropdown-toggle {
+  display: flex;
+  align-items: center;
+  height: 100%;
   background: none;
   border: none;
   color: white;
@@ -384,7 +389,8 @@ footer {
   font-family: 'Inter', sans-serif;
   font-weight: 500;
   cursor: pointer;
-  padding: 0;
+  padding: 8px 0; /* igual aos links */
+  line-height: 1;
 }
 
 .dropdown-toggle:hover {
